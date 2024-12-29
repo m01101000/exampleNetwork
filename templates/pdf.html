@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>WS24/25 | exampleNetwork</title>
+    <style>
+        /* Hinzugefügtes CSS für das Zentrieren */
+        .iframe-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body style="background-color: #CCC5B9;">
+
+    <nav class="navbar">
+        <h1>Course of study: Media Informatics Online | Course: Database-Technologies | Comparison of different database types</h1>
+        <ul>
+            <li><a href="/">dashboard</a></li>
+        </ul>
+    </nav>
+
+    <br>
+
+    <!-- Container für das Zentrieren des iframes -->
+    <div class="iframe-container">
+        <iframe src="{{ url_for('static', filename='pdf/Projekt.pdf') }}" 
+                width="1000px" 
+                height="820px" 
+                style="border: solid;
+                border-color: #403D39;">
+            Ihr Browser unterstützt das PDF-Format nicht.
+        </iframe>
+    </div>
+
+</body>
+</html>

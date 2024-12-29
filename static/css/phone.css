@@ -1,0 +1,207 @@
+.phone {
+    position: relative;
+    width: 400px;
+    height: 830px;
+    border-radius: 45px;
+    overflow: hidden;
+    margin-left: 40px;
+}
+
+.screen {
+    position: relative;
+    margin: 0px 5px 0 5px;
+    background-color: #CCC5B9;
+    height: 610px;
+    z-index: 1;
+}
+.contentpanel ul li {
+    list-style-type: none;
+    padding: 0;
+}
+.homeScreen {
+    margin-top: 30px;
+    margin-right: 20px;
+    display: block;
+    color: #403D39;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace, monospace;
+}
+.posts {
+    font-size: small;
+    height: 570px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #403d3980 #CCC5B9;
+    padding-right: 15px;
+}
+.postedby {
+    color: #FFFCF2;
+    text-decoration: none;
+    font-size: small;
+}
+.postLiked {
+    color: #403D39;
+    text-decoration: none;
+}
+.likeimg {
+    width: 10px;
+    height: 10px;
+}
+.commentimg {
+    width: 10px;
+    height: 10px;
+}
+.action {
+    color: #FFFCF2;
+    text-decoration: none;
+    font-size: small;
+}
+.newpostScreen {
+    margin-top: 30px;
+    margin-right: 20px;
+    display: none;
+    color: #403D39;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace, monospace;
+}
+.writeNewPost {
+    background-color: #CCC5B9;
+    border-color: #252422;
+    color: #403D39;
+    outline: none;
+    width: 250px;
+    height: 150px;
+    resize: none;
+}
+.sent {
+    margin-right: 15px;
+}
+
+.adduserScreen {
+    margin-top: 30px;
+    margin-right: 20px;
+    display: none;
+    color: #403D39;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace, monospace;
+}
+.dev1 {
+    font-size: small;
+}
+.getUser {
+    font-size: small;
+    height: 570px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #403d3980 #CCC5B9;
+    padding-right: 15px;
+}
+.searchuser {
+    width: 250px;
+    background-color: #CCC5B9;
+    border-color: #252422;
+    color: #EB5E28;
+    outline: none;
+}
+.search {
+    float: right;
+    margin-right: 10px;
+    height: 20px;
+    width: 20px;
+}
+.followbutton {
+    background-color: #252422;
+    color: #EB5E28;
+    border-radius: 5px;
+    border-color: #252422;
+    float: right;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+
+.logo {
+    position: relative;
+    background-color: #252422;
+    height: 35px;
+    z-index: 2;
+}
+.logo a {
+    font-size:x-large;
+    color: rgb(235, 94, 40);
+    font-family: 'Courier New', Courier, monospace, monospace;
+}
+
+.menu {
+    position: relative;
+    background-color: #252422;
+    height: 100px;
+    z-index: 2;
+    align-items: center;
+}
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.menu ul li {
+    margin-left: 35px;
+    text-align: center;
+}
+.menu ul li a {
+    color: #EB5E28;
+    text-decoration: none;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace, monospace;
+    transition: background-color 0.3s;
+}
+.menu ul li img {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    filter: brightness(0.5);
+}
+
+.phone-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 45px;
+    background-image: url('../images/s10.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #0000002f;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.postcontent {
+    color:#EB5E28;
+}
+
+.comments {
+    color: #252422;
+}
+
+/* Erfolgreicher Post: grüne Umrandung */
+textarea.writeNewPost.success {
+    border: 2px solid green;
+    box-shadow: 0 0 5px green;
+}
+
+/* Fehlgeschlagener Post: rote Umrandung */
+textarea.writeNewPost.error {
+    border: 2px solid red;
+    box-shadow: 0 0 5px red;
+}
+
+/* Standard-Zustand des Textfelds */
+textarea.writeNewPost {
+    border: 1px solid #252422;
+    box-shadow: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}

@@ -1,0 +1,62 @@
+.results {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-color: #CCC5B9;
+    width: 1400px;
+    height: 830px;
+    border: #252422;
+    border-radius: 10px;
+    border-style: none;
+    margin-left: 20px;
+}
+
+.compareDatabase {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 25px;
+}
+
+.RelationalDatabase {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-color: #CCC5B9;
+    width: 650px;
+    height: 375px;
+    border: #252422;
+    border-radius: 10px;
+    border-style: solid;
+    box-shadow: 5px 5px 25px #252422;
+}
+
+.GraphDatabase {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-color: #CCC5B9;
+    width: 650px;
+    border: #252422;
+    border-radius: 10px;
+    border-style: solid;
+    box-shadow: 5px 5px 25px #252422;
+}
+
+.diagramm {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 2;
+    background-color: #CCC5B9;
+    width: 1345px;
+    height: 355px;
+    border: #252422;
+    border-radius: 10px;
+    border-style: solid;
+    box-shadow: 5px 5px 25px #252422;
+}
+.resultdiagramm {
+    background-color: none;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}

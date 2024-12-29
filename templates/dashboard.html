@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/phone.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/results.css')}}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>WS24/25 | exampleNetwork</title>
+</head>
+<body>
+    <nav class="navbar">
+        <h1>course of study: Media Informatics Online | course: Database-Technologies | comparison of different database types
+        </h1>
+        <ul>
+            <li>
+                <form method="POST">
+                    <label for="number" style="color:#EB5E28">user:</label>
+                    <input type="text" id="number" name="number" value="{{ result }}" style="width: 50px; background-color: #403D39; color: #EB5E28; border-style: solid; border-color: #35322f;">
+                    <button type="submit" style="background-color: #403D39; color: #EB5E28; border-style: none">OK</button>
+                </form>
+            </li>
+            <li><a href="/pdf">pdf</a></li>
+        </ul>
+    </nav>
+    <div class="grid-container">
+        <div class="phone">
+            <div class="logo"></div>
+            <div class="logo"></div>
+            <div class="logo">
+                <a>&nbsp;&nbsp;exampleNetwork</a>
+            </div>
+            <div class="screen">
+                <div class="contentPanel">
+                    <ul>
+                        <script src="{{ url_for('static', filename='js/fetchPosts.js') }}"></script>
+                        <li class="homeScreen">
+                            <a>latest 50 posts</a>
+                            <br>
+                            <a>-----------------------------</a>
+                            <br>
+                            <div class="posts" id="postsContainer">
+                                <!-- Dynamisch geladene Posts werden hier eingefügt -->
+                                <p>Loading posts...</p>
+                            </div>
+                        </li>
+                                           
+
+                        <li class="newpostScreen">
+                            <a>New Post</a>
+                            <br>
+                            <a class="dev1">-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-</a>
+                            <div class="setNewPost">
+                                <!-- Bereich für neuen Post -->
+                                <textarea 
+                                    rows="5" 
+                                    class="writeNewPost" 
+                                    id="postContent" 
+                                    placeholder="Your post..."
+                                    required
+                                ></textarea>
+                                <button id="submitPost" class="sent" style="background-color: #EB5E28; border-color: #403D39; border-style: line; border-width: 1px; border-radius: 5px;">
+                                    <img src="{{ url_for('static', filename='images/sent.png') }}" alt="Send">
+                                </button>
+                                <br>
+                            </div>
+                            <a class="dev1">-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-</a>
+                            <br>
+                            <script src="{{ url_for('static', filename='js/OWNfetchPosts.js') }}"></script>
+                            <div class="posts" id="OWNpostsContainer" style="height: 380px;">
+                                <!-- Dynamisch geladene Posts werden hier eingefügt -->
+                                <p>Loading posts...</p>
+                            </div>
+                        </li>
+                        <script src="{{ url_for('static', filename='js/newpost.js') }}"></script>                        
+                        
+                        <li class="adduserScreen">
+                            <a>add friends</a>
+                            <br>
+                            <a class="dev1">-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-</a>
+                                <div class="getUser">
+                                    <div>
+                                        <input class="searchuser" type="text">
+                                        <img class="search" src="{{ url_for('static', filename='images/search.png') }}" alt="search">
+                                        <br>
+                                        <a>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-</a>
+                                        <br>
+                                    </div>
+                                    coming soon...
+                                </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li class="call_homeScreen" onclick="reloadChart()">
+                        <img src="{{ url_for('static', filename='images/home.png') }}" alt="">
+                        <br>
+                        <a href="/">home</a>
+                    </li>
+                    <li class="call_newpostScreen" onclick="reloadChart()">
+                        <img src="{{ url_for('static', filename='images/write.png') }}" alt="">
+                        <br>
+                        <a href="/">new</a>
+                    </li>
+                    <li class="call_adduserScreen">
+                        <img src="{{ url_for('static', filename='images/adduser.png') }}" alt="">
+                        <br>
+                        <a href="/">add</a>
+                    </li>                  
+                </ul>
+                <script src="{{ url_for('static', filename='js/switchappScreen.js') }}"></script>
+            </div>
+            <div class="phone-overlay"></div>
+        </div>
+
+        <div class="results">
+            <div class="compareDatabase">
+                <div class="RelationalDatabase">
+                    relational database PostgreSQL
+                </div>
+                <div class="GraphDatabase">
+                    graph database Neo4j
+                </div>
+                <script src="{{ url_for('static', filename='js/infoSlide.js') }}"></script>
+
+                <div class="diagramm">
+                    <canvas class="resultdiagramm" id="myChart"></canvas>
+                    <script src="{{ url_for('static', filename='js/diagramm.js') }}"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+@startuml SocialMediaDataModel
+
+entity User #ffffff {
+    + UserID : Integer
+    + Name : String
+    + Email : String
+    + CreatedAt : DateTime
+}
+
+entity Post #ffffff {
+    + PostID : Integer
+    + UserID : Integer
+    + Content : Text
+    + CreatedAt : DateTime
+    + MediaURL : String
+}
+
+entity Comment #ffffff {
+    + CommentID : Integer
+    + PostID : Integer
+    + UserID : Integer
+    + Content : Text
+    + CreatedAt : DateTime
+}
+
+entity Like #ffffff {
+    + LikeID : Integer
+    + PostID : Integer
+    + UserID : Integer
+    + CreatedAt : DateTime
+}
+
+entity Friendship #ffffff {
+    + UserID1 : Integer
+    + UserID2 : Integer
+    + CreatedAt : DateTime
+}
+
+User "1" -- "0..*" Post : "CREATED"
+Post "1" -- "0..*" Comment : "HAS_COMMENT"
+User "1" -- "0..*" Comment : "COMMENTED"
+Post "1" -- "0..*" Like : "HAS_LIKE"
+User "1" -- "0..*" Like : "LIKED"
+
+@enduml

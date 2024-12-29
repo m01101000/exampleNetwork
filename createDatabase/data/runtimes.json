@@ -1,0 +1,93 @@
+[
+    {
+        "messung": "latest 50 posts",
+        "messwerte": [
+            1.173,
+            0.037
+        ]
+    },
+    {
+        "messung": "latest own 50 posts",
+        "messwerte": [
+            1.208,
+            0.062
+        ]
+    },
+    {
+        "messung": "latest 50 posts",
+        "messwerte": [
+            1.21,
+            0.048
+        ]
+    },
+    {
+        "messung": "latest own posts",
+        "messwerte": [
+            1.149,
+            0.051
+        ]
+    },
+    {
+        "messung": "createPost",
+        "messwerte": [
+            0.003,
+            0.125
+        ]
+    },
+    {
+        "messung": "latest own posts",
+        "messwerte": [
+            1.316,
+            0.045
+        ]
+    },
+    {
+        "messung": "createPost",
+        "messwerte": [
+            0.002,
+            0.045
+        ]
+    },
+    {
+        "messung": "latest own posts",
+        "messwerte": [
+            1.207,
+            0.075
+        ]
+    },
+    {
+        "messung": "createPost",
+        "messwerte": [
+            0.002,
+            0.037
+        ]
+    },
+    {
+        "messung": "latest own posts",
+        "messwerte": [
+            1.193,
+            0.036
+        ]
+    },
+    {
+        "messung": "latest own posts",
+        "messwerte": [
+            1.144,
+            0.043
+        ]
+    },
+    {
+        "messung": "latest own posts",
+        "messwerte": [
+            1.134,
+            0.035
+        ]
+    },
+    {
+        "messung": "latest own posts",
+        "messwerte": [
+            1.121,
+            0.038
+        ]
+    }
+]
